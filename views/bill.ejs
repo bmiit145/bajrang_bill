@@ -46,7 +46,8 @@
                     </div>
                     <div class="row">
                         <div class="col-4 fw-bold">Date:</div>
-                        <div class="col-5"><%= new Date(data.bill_date).toLocaleDateString('en-IN') %>
+                        <div class="col-5">
+                            <%= data.bill_date ? new Date(data.bill_date).toLocaleDateString('en-IN') : '' %>
                         </div>
                     </div>
                     <div class="row">
@@ -63,7 +64,9 @@
                     </div>
                     <div class="row">
                         <div class="col-4">LR Date:</div>
-                        <div class="col-5"><%= new Date(data.lrDate).toLocaleDateString('en-IN') %></div>
+                        <div class="col-5">
+                            <%= data.lrDate ? new Date(data.bill_date).toLocaleDateString('en-IN') : '' %>
+                            </div>
                     </div>
                     <div class="row">
                         <div class="col-4">Transport:</div>
@@ -83,7 +86,9 @@
                     </div>
                     <div class="row">
                         <div class="col-4 fw-bold">Due Date:</div>
-                        <div class="col-5"><%= new Date(data.dueDate).toLocaleDateString('en-IN') %></div>
+                        <div class="col-5">
+                            <%= data.lrDate ? new Date(data.bill_date).toLocaleDateString('en-IN') : '' %> </div>
+
                     </div>
                 </div>
 

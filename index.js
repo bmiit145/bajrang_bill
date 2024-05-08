@@ -26,18 +26,19 @@ app.post('/generateBill', (req, res) => {
     let igst = 0;
 
     if (data.sgst) {
-        sgst = (temp * 0.09).toFixed(3);
+        sgst = (temp * 0.09).toFixed(2);
         totalAmt += parseFloat(sgst);
     }
     if (data.cgst) {
-        cgst = (temp * 0.09).toFixed(3);
+        cgst = (temp * 0.09).toFixed(2);
         totalAmt += parseFloat(cgst);
     }
     if (data.igst) {
-        igst = (temp * 0.09).toFixed(3);
+        igst = (temp * 0.09).toFixed(2);
         totalAmt += parseFloat(igst);
     }
 
+    totalAmt = parseFloat(totalAmt).toFixed(2);
     // Round off finalAmt
     let finalAmt = Math.round(totalAmt);
 
